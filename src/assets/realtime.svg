@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Askey Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Askey-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#00A5E4" x="0" y="0" width="600" height="600"></rect>
+        <g id="wireless-internet" transform="translate(122.000000, 137.000000)" stroke="#30B4E7" stroke-width="10">
+            <ellipse id="Oval" cx="177.384549" cy="175.082802" rx="18.3845495" ry="18.0828024"></ellipse>
+            <path d="M202.875248,216.71481 C217.313247,208.318362 227.05093,192.881677 227.05093,175.220806 C227.05093,148.633059 205.056881,127 178.025465,127 C150.994049,127 129,148.633059 129,175.220806 C129,192.881677 138.737683,208.318362 153.175683,216.71481" id="Path" stroke-linecap="round"></path>
+            <path d="M267.905783,325.406057 C320.277236,294.996811 355.434623,238.952178 355.434623,174.800423 C355.434623,78.2623687 275.866293,0 177.717311,0 C79.5683301,0 0,78.2623687 0,174.800423 C0,238.952178 35.1573868,294.996811 87.52884,325.406057" id="Path" stroke-linecap="round"></path>
+            <path d="M246.210553,288.818197 C285.927308,265.720431 312.640059,223.183652 312.640059,174.607217 C312.640059,101.486392 252.161019,42 177.820029,42 C103.47904,42 43,101.486392 43,174.607217 C43,223.183652 69.7127504,265.720431 109.429505,288.818197" id="Path" stroke-linecap="round"></path>
+            <path d="M224.515324,252.218283 C251.589637,236.468162 269.845495,207.535678 269.845495,174.414012 C269.845495,124.559726 228.60895,84 177.922747,84 C127.236544,84 86,124.559726 86,174.414012 C86,207.535678 104.255858,236.468162 131.330171,252.218283" id="Path" stroke-linecap="round"></path>
+        </g>
+        <text id="Real-time-Collaborat" font-family="Avenir-Medium, Avenir" font-size="55" font-weight="400" line-spacing="60" letter-spacing="-0.2742857" fill="#FFFFFF">
+            <tspan x="173.453929" y="295">Real-time</tspan>
+            <tspan x="122" y="355">Collaboration</tspan>
+        </text>
+    </g>
+</svg>

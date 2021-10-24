@@ -1,0 +1,14 @@
+<svg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
+    <defs>
+        <linearGradient x1='110.027%' y1='9.749%' x2='9.609%' y2='67.692%' id='linearGradient-1'>
+            <stop stopColor='#1D7DCE' offset='0%' />
+            <stop stopColor='#1964A4' offset='100%' />
+        </linearGradient>
+    </defs>
+    <g id='Page-1' fill='none' fillRule='evenodd'>
+        <g id='logo-apply-copy-12' transform='translate(-140 -162)' fill='url(#linearGradient-1)'>
+            <path d='M724.704942,162 L972,162 L455.295058,1019 L208,1019 L724.704942,162 Z M1040,590 L781.354361,1019 L534,1019 L793.090315,590 L1040,590 Z M646,162 L387.354361,591 L140,591 L399.090315,162 L646,162 Z'
+            id='Combined-Shape' transform='matrix(-1 0 0 1 1180 0)' />
+        </g>
+    </g>
+</svg>

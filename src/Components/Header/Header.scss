@@ -1,0 +1,69 @@
+@import "../../constants/styles.scss";
+
+.Header {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 2vh;
+  font-size: 18px;
+  font-weight: medium;
+
+  @include mobile {
+    justify-content: space-between;
+  }
+
+  img {
+    height: 30px;
+    width: auto;
+  }
+
+  .links {
+    margin-left: 50px;
+    > * {
+      margin-right: 20px;
+    }
+  }
+
+  .link {
+    color: $dark-grey;
+    transition: 0.5s;
+    position: relative;
+    text-decoration: none;
+    &:hover {
+      color: $dark-blue;
+    }
+    &.active {
+      color: $dark-blue;
+      font-weight: bold;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+  .link.active:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  .link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: $dark-blue;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .link:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}

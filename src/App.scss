@@ -1,0 +1,23 @@
+@import "./constants/styles.scss";
+
+.App {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  font-family: "Nunito Sans", sans-serif;
+  // overflow: scroll;
+
+  @include desktop {
+    width: $desktop-content-width;
+  }
+
+  @include tablet {
+    width: $tablet-content-width;
+  }
+
+  @include mobile {
+    width: $mobile-content-width;
+  }
+}

@@ -1,0 +1,182 @@
+// Main colours
+$light-grey: #aaaaaa;
+$medium-grey: #747474;
+$dark-grey: #393e46;
+$dark-blue: #1964a4;
+$light-blue: #4a90e2;
+
+// Screens
+$tablet-width: 1025px;
+$mobile-width: 767px;
+
+// Layout
+$desktop-content-width: 58vw;
+$tablet-content-width: 85vw;
+$mobile-content-width: 90vw;
+
+// Screen Sizes
+@mixin desktop {
+  @media (min-width: #{$tablet-width + 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-and-tablet {
+  @media (min-width: #{$mobile-width + 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+.hide-in-desktop {
+  @include desktop {
+    display: none;
+  }
+}
+
+.hide-in-tablet {
+  @include tablet {
+    display: none;
+  }
+}
+
+.hide-in-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+// Fonts
+
+@mixin font {
+  &.bold {
+    font-weight: bold;
+  }
+  &.medium {
+    font-weight: normal;
+  }
+  &.book {
+    font-weight: lighter;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+// Text types
+.title {
+  font-weight: bolder;
+  color: $light-grey;
+  font-size: 50px;
+  letter-spacing: 1px;
+  @include mobile {
+    font-size: 35px;
+  }
+  @include tablet {
+    font-size: 50px;
+  }
+}
+
+.subheader1 {
+  font-weight: bold;
+  color: $dark-grey;
+  font-family: "Merriweather";
+
+  @include desktop-and-tablet() {
+    font-size: 40px;
+  }
+
+  @include mobile {
+    font-size: 25px;
+  }
+}
+
+.subheader2 {
+  font-weight: bolder;
+  color: $dark-grey;
+
+  @include desktop-and-tablet {
+    font-size: 30px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+.subheader3 {
+  font-weight: bolder;
+  color: $light-grey;
+
+  @include desktop-and-tablet {
+    font-size: 25px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.basetext1 {
+  @include font;
+
+  @include desktop-and-tablet {
+    font-size: 23px;
+  }
+
+  @include mobile {
+    font-size: 17px;
+  }
+  color: $medium-grey;
+}
+
+.basetext2 {
+  @include font;
+  font-size: 18px;
+  color: $dark-grey;
+}
+
+.basetext3 {
+  @include font;
+  font-size: 15px;
+  color: $medium-grey;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

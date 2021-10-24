@@ -1,0 +1,76 @@
+@import "../../constants//styles.scss";
+
+.ProjectCard {
+  width: 100%;
+  margin-bottom: 2vh;
+  justify-content: space-between;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  &:hover {
+    // background: red;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  }
+  align-items: center;
+
+  @include desktop {
+    min-height: 250px;
+    height: 30vh;
+  }
+  @include tablet {
+    height: 250px;
+  }
+  @include desktop-and-tablet {
+    display: flex;
+  }
+  @include mobile {
+    // height: 270px;
+  }
+
+  img {
+    @include desktop-and-tablet {
+      height: 120%;
+      width: auto;
+    }
+    @include mobile {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @include desktop-and-tablet {
+      height: 100%;
+      width: 30%;
+    }
+    @include mobile {
+      height: 250px;
+    }
+  }
+
+  .text {
+    height: 100%;
+    box-sizing: border-box;
+    @include desktop-and-tablet {
+      padding: 4%;
+      width: 70%;
+    }
+    @include mobile {
+      padding: 4%;
+      width: 100%;
+    }
+    > * {
+      margin-top: 0.8%;
+    }
+  }
+  .summary {
+    margin-top: 5%;
+    > * {
+      margin-top: 0.5%;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../constants/styles.scss";
+
+.Home {
+  margin-bottom: 70px;
+  .Portrait {
+    position: relative;
+    top: 0;
+    left: 0;
+    img {
+      width: 50%;
+      @include mobile {
+        width: 100%;
+      }
+    }
+    img:nth-child(1) {
+      z-index: 5;
+      position: absolute;
+    }
+    img:nth-child(2) {
+      position: absolute;
+      left: auto;
+    }
+  }
+
+  .subheader1 {
+    margin: 20px;
+  }
+
+  .description {
+    margin: 7px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      padding: 30px;
+    }
+
+    @include mobile {
+      margin-top: 50px;
+    }
+    .link {
+      padding: 4px;
+      color: $light-blue;
+    }
+  }
+}
