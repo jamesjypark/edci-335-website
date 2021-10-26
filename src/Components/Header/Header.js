@@ -18,7 +18,7 @@ class Header extends React.Component {
             design
           </NavLink>
           <NavLink exact to="/" className="link" activeClassName="active">
-            about me
+            our goal
           </NavLink>
         </div>
       </div>

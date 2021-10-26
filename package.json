@@ -1,11 +1,11 @@
 {
-  "name": "v3_portfolio",
+  "name": "edci-335-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jamesjypark.com",
+  "homepage": "https://edci335-programming-languages.com",
   "dependencies": {
     "markdown-to-jsx": "^6.10.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ga": "^2.6.0",
