@@ -12,13 +12,10 @@ class Header extends React.Component {
         </NavLink>
         <div className="links">
           <NavLink to="/code" className="link" activeClassName="active">
-            code
-          </NavLink>
-          <NavLink to="/design" className="link" activeClassName="active">
-            design
+            programme
           </NavLink>
           <NavLink exact to="/" className="link" activeClassName="active">
-            our goal
+            motivation
           </NavLink>
         </div>
       </div>
