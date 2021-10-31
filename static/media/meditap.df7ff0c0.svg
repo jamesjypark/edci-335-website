@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Meditap</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Meditap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E7FAFF" x="0" y="0" width="600" height="600"></rect>
+        <g id="meditap-logo" transform="translate(172.000000, 172.000000)">
+            <g id="Group">
+                <path d="M143.622419,91.2055207 L112.966081,91.2055207 L75.206974,53.4464138 L128.29425,0.359138078 L181.381525,53.4464138 L143.622419,91.2055207 Z" id="Combined-Shape" fill="#1DAACE"></path>
+                <path d="M165.794479,113.141048 L203.499644,75.4358834 L256.586919,128.523159 L203.499644,181.610435 L165.794479,143.90527 L165.794479,113.141048 Z" id="Combined-Shape" fill="#1964A4"></path>
+                <path d="M90.7177339,113.064762 L90.7177339,144.238854 L53.2175044,181.739084 L0.130228624,128.651808 L53.2175044,75.5645321 L90.7177339,113.064762 Z" id="Combined-Shape" fill="#1964A4"></path>
+                <path d="M112.78191,166.282266 L144.063887,166.282266 L181.510174,203.728553 L128.422898,256.815829 L75.3356226,203.728553 L112.78191,166.282266 Z" id="Combined-Shape" fill="#1DAACE"></path>
+            </g>
+        </g>
+    </g>
+</svg>
