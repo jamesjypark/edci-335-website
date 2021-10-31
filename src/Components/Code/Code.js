@@ -12,6 +12,11 @@ import Outro from "../Projects/Outro";
 import Meditap from "../Projects/Meditap";
 
 import MeditapLogo from "../../assets/meditap.svg";
+import IntroLogo from "../../assets/intro.svg";
+import Part1Logo from "../../assets/part1.svg";
+import Part2Logo from "../../assets/part2.svg";
+import Part3Logo from "../../assets/part3.svg";
+import OutroLogo from "../../assets/outro.svg";
 
 import "./Code.scss";
 
@@ -20,19 +25,19 @@ function CodeList() {
     <div>
       <div className="title left">programme (no pun intended)</div>
       <NavLink className="link" to="/code/meditap">
-        <ProjectCard image={MeditapLogo} {...Intro} />
+        <ProjectCard image={IntroLogo} {...Intro} />
       </NavLink>
       <NavLink className="link" to="/code/meditap">
-        <ProjectCard image={MeditapLogo} {...Part1} />
+        <ProjectCard image={Part1Logo} {...Part1} />
       </NavLink>
       <NavLink className="link" to="/code/meditap">
-        <ProjectCard image={MeditapLogo} {...Part2} />
+        <ProjectCard image={Part2Logo} {...Part2} />
       </NavLink>
       <NavLink className="link" to="/code/meditap">
-        <ProjectCard image={MeditapLogo} {...Part3} />
+        <ProjectCard image={Part3Logo} {...Part3} />
       </NavLink>
       <NavLink className="link" to="/code/meditap">
-        <ProjectCard image={MeditapLogo} {...Outro} />
+        <ProjectCard image={OutroLogo} {...Outro} />
       </NavLink>
     </div>
   );
