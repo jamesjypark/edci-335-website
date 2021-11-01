@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "719721233b53243f7e70972999b68c58",
+    "revision": "02040a2ab50fec353d0a41f56bc500d8",
     "url": "/edci-335-website/index.html"
   },
   {
-    "revision": "02973484531afae923dd",
+    "revision": "139dfb88918e14481bc7",
     "url": "/edci-335-website/static/css/main.417febfa.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/edci-335-website/static/js/2.dc8d9725.chunk.js"
   },
   {
-    "revision": "02973484531afae923dd",
-    "url": "/edci-335-website/static/js/main.68b7802f.chunk.js"
+    "revision": "139dfb88918e14481bc7",
+    "url": "/edci-335-website/static/js/main.a8a2717d.chunk.js"
   },
   {
     "revision": "8a0b1a1f1e91298d2998",
