@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "321fdde54ae6e95099f41acae7bb77a5",
+    "revision": "4cfdf35631d0e5027df6204741b82346",
     "url": "/edci-335-website/index.html"
   },
   {
-    "revision": "7101f120bd0d715e480d",
+    "revision": "fb7daea26ff3eb70cea5",
     "url": "/edci-335-website/static/css/main.417febfa.chunk.css"
   },
   {
-    "revision": "8770a11bd55a8251e860",
-    "url": "/edci-335-website/static/js/2.dc8d9725.chunk.js"
+    "revision": "6546a35f5aef26bde846",
+    "url": "/edci-335-website/static/js/2.1609469a.chunk.js"
   },
   {
-    "revision": "7101f120bd0d715e480d",
-    "url": "/edci-335-website/static/js/main.8c66cec0.chunk.js"
+    "revision": "fb7daea26ff3eb70cea5",
+    "url": "/edci-335-website/static/js/main.aaab3a49.chunk.js"
   },
   {
     "revision": "8a0b1a1f1e91298d2998",
@@ -42,10 +42,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "01e0c90cad82584bfd87a75bf26456b9",
     "url": "/edci-335-website/static/media/logo.01e0c90c.png"
-  },
-  {
-    "revision": "df7ff0c00d503fc31cfa5fc602b41613",
-    "url": "/edci-335-website/static/media/meditap.df7ff0c0.svg"
   },
   {
     "revision": "9f5c3c7dfcfc3063b7b45f3d52864475",
