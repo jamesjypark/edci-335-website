@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Switch, Route } from "react-router-dom";
+import { NavLink, Switch, Route, useLocation } from "react-router-dom";
 
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ProjectPage from "../ProjectPage/ProjectPage";
@@ -11,7 +11,6 @@ import Part3 from "../Projects/Part3";
 import Outro from "../Projects/Outro";
 import Meditap from "../Projects/Meditap";
 
-import MeditapLogo from "../../assets/meditap.svg";
 import IntroLogo from "../../assets/intro.svg";
 import Part1Logo from "../../assets/part1.svg";
 import Part2Logo from "../../assets/part2.svg";
@@ -24,19 +23,19 @@ function CodeList() {
   return (
     <div>
       <div className="title left">programme (no pun intended)</div>
-      <NavLink className="link" to="/code/meditap">
+      <NavLink className="link" to="/edci-335-website/code/meditap">
         <ProjectCard image={IntroLogo} {...Intro} />
       </NavLink>
-      <NavLink className="link" to="/code/meditap">
+      <NavLink className="link" to="/edci-335-website/code/meditap">
         <ProjectCard image={Part1Logo} {...Part1} />
       </NavLink>
-      <NavLink className="link" to="/code/meditap">
+      <NavLink className="link" to="/edci-335-website/code/meditap">
         <ProjectCard image={Part2Logo} {...Part2} />
       </NavLink>
-      <NavLink className="link" to="/code/meditap">
+      <NavLink className="link" to="/edci-335-website/code/meditap">
         <ProjectCard image={Part3Logo} {...Part3} />
       </NavLink>
-      <NavLink className="link" to="/code/meditap">
+      <NavLink className="link" to="/edci-335-website/code/meditap">
         <ProjectCard image={OutroLogo} {...Outro} />
       </NavLink>
     </div>
@@ -48,9 +47,9 @@ class Code extends React.Component {
     return (
       <div>
         <Switch>
-          <Route exact path="/code" component={CodeList} />
+          <Route exact path="/edci-335-website/code" component={CodeList} />
           <Route
-            path="/code/meditap"
+            path="/edci-335-website/code/meditap"
             render={() => <ProjectPage {...Meditap} />}
           />
         </Switch>

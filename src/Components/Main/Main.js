@@ -11,8 +11,8 @@ class Main extends React.Component {
     return (
       <div className="Main">
         <Switch>
-          <Route exact path={"/"} component={Home} />
-          <Route path="/code" component={Code} />
+          <Route exact path={"/edci-335-website/"} component={Home} />
+          <Route path="/edci-335-website/code" component={Code} />
         </Switch>
       </div>
     );

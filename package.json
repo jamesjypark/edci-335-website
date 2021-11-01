@@ -2,21 +2,21 @@
   "name": "edci-335-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://edci335-programming-languages.com",
+  "homepage": "https://jamesjypark.github.io/edci-335-website/",
   "dependencies": {
     "markdown-to-jsx": "^6.10.2",
     "node-sass": "^4.14.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ga": "^2.6.0",
-    "react-router-dom": "^5.0.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.0.1",
     "simple-parallax-js": "^5.1.0",
     "typescript": "^4.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,6 +38,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.2.0"
   }
 }
