@@ -42,7 +42,7 @@ class Home extends React.Component {
           <br />
           <div>We are <a href="https://www.linkedin.com/in/josef-waller-ab4870196/" className="link" target="_blank">Josef</a> and <a href="https://www.linkedin.com/in/jamesjypark/" className="link" target="_blank">James</a>, 4th year Computer Science students at the University of Victoria. We will do our best to explain how different programming languages differ and which one is right for you.</div>
           <br />
-          <div>Let's get <a href="/code" className="link">started!</a></div>
+          <div>Let's get <a href="/edci-335-website/code" className="link">started!</a></div>
         </div>
       </div>
     );
