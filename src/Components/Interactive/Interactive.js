@@ -3,6 +3,7 @@ import set from 'lodash/set'
 import clone from 'lodash/clone'
 import reject from 'lodash/reject'
 import flatten from 'lodash/flatten'
+import padEnd from 'lodash/padEnd'
 import blockMap from './blockMap'
 
 import './Interactive.scss'
@@ -21,7 +22,7 @@ export default function Interactive(props) {
   console.log(allVars)
   const getC = blocksLines => `#include <iostream>\nint main() {\n  ${allVars.map(v => `int ${v} = 0;`).join('\n  ')}\n  ${blocksLines.join('\n  ')}\n}`
   const getPython = blocksLines => blocksLines.join('\n')
-  const getMips = blocksLines => blocksLines.join('\n')
+  const getMips = blocksLines => `  main:\n      ${blocksLines.join('\n      ')}\n\n    .data\n      ${allVars.map(v => `${padEnd(v + ':', 8)}.word`).join('\n      ')}`
   return (
   <>
     <div>
