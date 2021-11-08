@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import set from 'lodash/set'
 import clone from 'lodash/clone'
-import reject from 'lodash/reject'
+import uniq from 'lodash/uniq'
 import flatten from 'lodash/flatten'
 import padEnd from 'lodash/padEnd'
 import blockMap from './blockMap'
@@ -18,7 +18,7 @@ export default function Interactive(props) {
     console.log(blocksClone)
     setBlocks(blocksClone)
   }
-  const allVars = blocks.reduce((acc, b) => [...acc, ...Object.values(b.variableNames)], []).filter(isNaN)
+  const allVars = uniq(blocks.reduce((acc, b) => [...acc, ...Object.values(b.variableNames)], []).filter(isNaN))
   console.log(allVars)
   const getC = blocksLines => {
     const prefix = [
