@@ -89,6 +89,6 @@ export default {
           Devpost
         </a>
       ]
-    }
+    },
   ]
 };

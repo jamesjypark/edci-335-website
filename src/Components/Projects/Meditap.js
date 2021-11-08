@@ -128,6 +128,7 @@ export default {
       type: "paragraph",
       text:
         "Throughout the project, I spent countless nights modifying (and completely breaking) the application according to the feedback I received from Dr. Lett and medical professionals. The experience, despite being moderately painful, allowed me to deeply understand and appreciate design patterns that goes inside building a robust and flexible program."
-    }
+    },
+    { type: 'interactive' }
   ]
 };

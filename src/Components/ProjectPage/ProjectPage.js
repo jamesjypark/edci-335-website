@@ -1,6 +1,7 @@
 import React from "react";
 import Markdown from "markdown-to-jsx";
 import { render } from "react-dom";
+import Interactive from "../Interactive/Interactive"
 
 import "./ProjectPage.scss";
 
@@ -67,6 +68,9 @@ class ProjectPage extends React.Component {
               title="video"
             />
           );
+        case "interactive":
+          console.log("asdf")
+          return <Interactive />
       }
     });
   };

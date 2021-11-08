@@ -6,6 +6,7 @@ import Background from "../../assets/background.png";
 import Portrait from "../../assets/portrait.png";
 import Blocker from "../../assets/blocker.png";
 import simpleParallax from "simple-parallax-js";
+import Interactive from "../Interactive/Interactive";
 
 class Home extends React.Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class Home extends React.Component {
           <br />
           <div>Let's get <a href="/edci-335-website/code" className="link">started!</a></div>
         </div>
+        <Interactive />
       </div>
     );
   }
