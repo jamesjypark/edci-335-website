@@ -20,9 +20,29 @@ export default function Interactive(props) {
   }
   const allVars = blocks.reduce((acc, b) => [...acc, ...Object.values(b.variableNames)], []).filter(isNaN)
   console.log(allVars)
-  const getC = blocksLines => `#include <iostream>\nint main() {\n  ${allVars.map(v => `int ${v} = 0;`).join('\n  ')}\n  ${blocksLines.join('\n  ')}\n}`
+  const getC = blocksLines => {
+    const prefix = [
+    '#include <iostream>',
+    '',
+    'int main() {'
+    ]
+    const variables = allVars.map(v => `  int ${v} = 0;`)
+    const lines = blocksLines.map(b => `  ${b}`)
+    const suffix = ['}']
+    return [...prefix, ...variables, ...lines, ...suffix].join('\n')
+  }
   const getPython = blocksLines => blocksLines.join('\n')
-  const getMips = blocksLines => `  main:\n      ${blocksLines.join('\n      ')}\n\n    .data\n      ${allVars.map(v => `${padEnd(v + ':', 8)}.word`).join('\n      ')}`
+  const getMips = blocksLines => {
+    const prefix = [
+    '  main:'
+    ]
+    const lines = blocksLines.map(b => `      ${b}`)
+    const variables = [
+      '    .data',
+      ...allVars.map(v => `      ${padEnd(`${v}:`, 8)}.word`)
+    ]
+    return [...prefix, ...lines, ...variables].join('\n')
+  }
   return (
   <>
     <div>
