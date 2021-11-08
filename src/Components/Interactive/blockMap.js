@@ -1,12 +1,17 @@
 import React from 'react'
 
+const getVariableInput = (vars, setVars, varName, type='string') => {
+  return <input value={vars[varName]} onChange={e => setVars(varName, e.target.value)} type={type} />
+}
+
+
 export default [
   {
     id: 1,
     text: 'Add one variable to another',
     render: (vars, setVars) => <>
-      Add <input value={vars['v2']} onChange={e => setVars('v2', e.target.value)} />
-      to <input value={vars['v1']} onChange={e => setVars('v1', e.target.value)} />
+      Add {getVariableInput(vars, setVars, 'v2')}
+      to {getVariableInput(vars, setVars, 'v1')}
     </>,
     python: vars => `${vars['v1']} += ${vars['v2']}`,
     c: vars => `${vars['v1']} = ${vars['v1']} + ${vars['v2']}`,
@@ -20,8 +25,7 @@ export default [
     id: 2,
     text: 'Add a constant to a variable',
     render: (vars, setVars) => <>
-      Add <input value={vars['v2']} onChange={e => setVars('v2', e.target.value)} type='number' />
-      to <input value={vars['v1']} onChange={e => setVars('v1', e.target.value)} />
+      Add {getVariableInput(vars, setVars, 'v2', 'number')} to {getVariableInput(vars, setVars, 'v1')}
     </>,
     python: vars => `${vars['v1']} += ${vars['v2']}`,
     c: vars => `${vars['v1']} = ${vars['v1']} + ${vars['v2']}`,
