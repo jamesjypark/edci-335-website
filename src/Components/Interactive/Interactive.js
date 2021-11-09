@@ -11,8 +11,6 @@ import './Interactive.scss'
 
 export default function Interactive(props) {
   const [blocks, setBlocks] = useState([])
-  const insertVariables = b => {
-  }
   const setBlockVariable = (index, varName, varVal) => {
     let blocksClone = clone(blocks)
     set(blocksClone, `[${index}].variableNames[${varName}]`, varVal)
@@ -46,43 +44,26 @@ export default function Interactive(props) {
   }
   return (
   <>
-    <div>
-      {blockMap.map(b => <button onClick={() => setBlocks([...blocks, {
-        id: b.id,
-        variableNames: clone(b.initialVars)
+    <div className>
+      {
+        blockMap.map(b => <button 
+          className="button bold"
+          onClick={
+          () => setBlocks([...blocks, {
+            id: b.id,
+            variableNames: clone(b.initialVars)
+          }])
+        }>{b.text}</button>)
       }
-      ])}>{b.text}</button>)}
     </div>
-    <div>
+    <div className="input-container">
       {blocks.map((b, i) => <div>{blockMap.find(bM => bM.id == b.id).render(
       b.variableNames,
       (varName, varValue) => console.log(i) || setBlockVariable(i, varName, varValue))}</div>)}
     </div>
     <div className="code-container">
-      <div className="code">
-        <div className="basetext2"> Python </div>
-        <CopyBlock
-          text={getPython(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).python(b.variableNames))))}
-          language={"python"}
-          showLineNumbers={true}
-          startingLineNumber={1}
-          theme={dracula}
-          wrapLines
-        />
-      </div>
-      <div className="code">
-        <div className="basetext2"> C </div>
-        <CopyBlock
-          text={getC(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).c(b.variableNames))))}
-          language={"c"}
-          showLineNumbers={true}
-          startingLineNumber={1}
-          theme={dracula}
-          wrapLines
-        />
-      </div>
-      <div className="code">
-        <div className="basetext2"> MIPS </div>
+      <div className={`code ${props.languages.includes("mips") ? "" : "hide"}`}>
+        <div className="basetext1 bold center"> MIPS </div>
         <CopyBlock
           text={getMips(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).mips(b.variableNames))))}
           language={"c"}
@@ -92,12 +73,29 @@ export default function Interactive(props) {
           wrapLines
         />
       </div>
+      <div className={`code ${props.languages.includes("c") ? "" : "hide"}`}>
+        <div className="basetext1 bold center"> C </div>
+        <CopyBlock
+          text={getC(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).c(b.variableNames))))}
+          language={"c"}
+          showLineNumbers={true}
+          startingLineNumber={1}
+          theme={dracula}
+          wrapLines
+        />
+      </div>
+      <div className={`code ${props.languages.includes("python") ? "" : "hide"}`}>
+        <div className="basetext1 bold center"> Python </div>
+        <CopyBlock
+          text={getPython(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).python(b.variableNames))))}
+          language={"python"}
+          showLineNumbers={true}
+          startingLineNumber={1}
+          theme={dracula}
+          wrapLines
+        />
+      </div>
     </div>
-    {/* <div className='code-container'>
-      <textarea className='code' value={getPython(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).python(b.variableNames))))} />
-      <textarea className='code' value={getC(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).c(b.variableNames))))} />
-      <textarea className='code' value={getMips(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).mips(b.variableNames))))} />
-    </div> */}
   </>
   )
 }

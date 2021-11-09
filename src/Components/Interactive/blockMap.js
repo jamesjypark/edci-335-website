@@ -17,8 +17,7 @@ export default [
     id: 1,
     text: 'Add one variable to another',
     render: (vars, setVars) => <>
-      Add {getVariableNameInput(vars, setVars, 'v2')}
-      to {getVariableNameInput(vars, setVars, 'v1')}
+      Add {getVariableNameInput(vars, setVars, 'v2')} to {getVariableNameInput(vars, setVars, 'v1')}
     </>,
     python: vars => [`${vars['v1']} += ${vars['v2']}`],
     c: vars => [`${vars['v1']} = ${vars['v1']} + ${vars['v2']};`],
@@ -59,8 +58,7 @@ export default [
     id: 3,
     text: 'Multiply one variable by another',
     render: (vars, setVars) => <>
-      Multiply {getVariableNameInput(vars, setVars, 'a')}
-      by {getVariableNameInput(vars, setVars, 'b')}
+      Multiply {getVariableNameInput(vars, setVars, 'a')} by {getVariableNameInput(vars, setVars, 'b')}
     </>,
     python: ({a, b}) => [`${a} *= ${b}`],
     c: ({a, b}) => [`${a} = ${a} * ${b}`],

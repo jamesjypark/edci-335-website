@@ -44,7 +44,7 @@ class ProjectPage extends React.Component {
         case "subheader2":
           return (
             <div className="margin-container left">
-              <div className="subheader3">{item.text}</div>
+              <div className="subheader2">{item.text}</div>
             </div>
           );
         case "paragraph":
@@ -85,19 +85,20 @@ class ProjectPage extends React.Component {
           )
         case "code":
           return (
-            <div>
-              <CopyBlock
-                text={item.code}
-                language={"c"}
-                showLineNumbers={true}
-                startingLineNumber={1}
-                theme={dracula}
-                wrapLines
-              />
+            <div className="code-block">
+            <CopyBlock
+              language="c"
+              text={item.code}
+              codeBlock
+              theme={dracula}
+              showLineNumbers={true}
+            />
             </div>
           )
         case "interactive":
-          return <Interactive />
+          return <Interactive 
+            languages = {item.languages}
+          />
         case "break":
           return <div></div>
       }

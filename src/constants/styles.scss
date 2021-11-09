@@ -180,3 +180,20 @@ $mobile-content-width: 90vw;
     opacity: 1;
   }
 }
+
+.button {
+  background-color: $light-blue;
+  display: inline-block;
+  padding: 1%;
+  font-size: 15px;
+  font-weight: 3000;
+  color: white;
+  border: 0.1em solid #ffffff;
+  border-radius: 0.8em;
+
+  @include font;
+}
+
+.button:hover {
+  background-color: $dark-blue;
+}

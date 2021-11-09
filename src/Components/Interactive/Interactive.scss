@@ -1,8 +1,30 @@
+@import "../../constants/styles.scss";
+
 .code {
-  width: 33%;
+  flex: 1;
   height: 100%;
+
+  > * {
+    text-align: left;
+  }
 }
+
+.hide {
+  display: none;
+}
+
 .code-container {
+  margin-top: 20px;
   width: 100%;
   display: flex;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.input-container {
+  > * {
+    margin: 10px;
+  }
 }

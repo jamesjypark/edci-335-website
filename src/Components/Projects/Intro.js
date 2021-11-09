@@ -22,9 +22,8 @@ export default {
       text: "Introduction to programming languages using an analogy of housing"
     },
     {
-      type: "image-caption",
-      address: require("../../assets/intro-1.jpg"),
-      caption: "Imagine you are trying to build a house to live in. Which factors will you consider?"
+      type: "image",
+      address: require("../../assets/intro-1.png"),
     },
     {
       type: "paragraph",

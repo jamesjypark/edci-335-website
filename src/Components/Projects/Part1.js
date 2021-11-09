@@ -1,8 +1,6 @@
-import React from "react";
-
 export default {
   title: "Part 1 - Assembly (MIPS)",
-  duration: "5 Minutes",
+  duration: "10 Minutes",
   technology: "Complete Introduction",
   summary: [
     "The building blocks of programming languages",
@@ -15,7 +13,7 @@ export default {
     },
     {
       type: "duration",
-      text: "5 Minute Read"
+      text: "10 Minutes"
     },
     {
       type: "technology",
@@ -23,7 +21,7 @@ export default {
     },
     {
       type: "image-caption",
-      address: require("../../assets/part1-1.jpg"),
+      address: require("../../assets/part1-1.png"),
       caption: "Assembly is the closest programming language to machine code"
     },
     {
@@ -33,9 +31,7 @@ export default {
     },
     {
       type: "code",
-      code: `li $1, 10
-      addi $2, $1,  5
-      sub $3, $2,  $1`
+      code: `li $1, 10\naddi $2, $1, 5\nsub $3, $2, $1`
     },
     {
       type: "paragraph",
@@ -70,10 +66,15 @@ export default {
     {
       type: "paragraph",
       text:
-        `Click different buttons to see how much code is required for the same functionality in Python, C, and Assembly (MIPS).`
+        `Click different buttons to see how much Assembly (MIPS) code is needed for different tasks.`
     },
     {
-      type: "interactive"
+      type: "interactive",
+      languages: ["mips"]
+    },
+    {
+      type: "paragraph",
+      text: "Even for small functionalities, you can see that there are lots of lines of complexity in the code. This makes it easier for the machine to understand, but difficult for a human programmer."
     },
     {
       type: "subheader2",
