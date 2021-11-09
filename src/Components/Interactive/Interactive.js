@@ -5,6 +5,7 @@ import uniq from 'lodash/uniq'
 import flatten from 'lodash/flatten'
 import padEnd from 'lodash/padEnd'
 import blockMap from './blockMap'
+import { CopyBlock, dracula } from "react-code-blocks";
 
 import './Interactive.scss'
 
@@ -57,11 +58,46 @@ export default function Interactive(props) {
       b.variableNames,
       (varName, varValue) => console.log(i) || setBlockVariable(i, varName, varValue))}</div>)}
     </div>
-    <div className='code-container'>
+    <div className="code-container">
+      <div className="code">
+        <div className="basetext2"> Python </div>
+        <CopyBlock
+          text={getPython(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).python(b.variableNames))))}
+          language={"python"}
+          showLineNumbers={true}
+          startingLineNumber={1}
+          theme={dracula}
+          wrapLines
+        />
+      </div>
+      <div className="code">
+        <div className="basetext2"> C </div>
+        <CopyBlock
+          text={getC(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).c(b.variableNames))))}
+          language={"c"}
+          showLineNumbers={true}
+          startingLineNumber={1}
+          theme={dracula}
+          wrapLines
+        />
+      </div>
+      <div className="code">
+        <div className="basetext2"> MIPS </div>
+        <CopyBlock
+          text={getMips(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).mips(b.variableNames))))}
+          language={"c"}
+          showLineNumbers={true}
+          startingLineNumber={1}
+          theme={dracula}
+          wrapLines
+        />
+      </div>
+    </div>
+    {/* <div className='code-container'>
       <textarea className='code' value={getPython(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).python(b.variableNames))))} />
       <textarea className='code' value={getC(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).c(b.variableNames))))} />
       <textarea className='code' value={getMips(flatten(blocks.map(b => blockMap.find(bM => bM.id == b.id).mips(b.variableNames))))} />
-    </div>
+    </div> */}
   </>
   )
 }

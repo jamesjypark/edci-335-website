@@ -1,6 +1,7 @@
 import React from "react";
 import Interactive from "../Interactive/Interactive"
 import { NavLink } from "react-router-dom";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 import "./ProjectPage.scss";
 
@@ -82,8 +83,23 @@ class ProjectPage extends React.Component {
               </NavLink>
             </div>
           )
+        case "code":
+          return (
+            <div>
+              <CopyBlock
+                text={item.code}
+                language={"c"}
+                showLineNumbers={true}
+                startingLineNumber={1}
+                theme={dracula}
+                wrapLines
+              />
+            </div>
+          )
         case "interactive":
           return <Interactive />
+        case "break":
+          return <div></div>
       }
     });
   };
