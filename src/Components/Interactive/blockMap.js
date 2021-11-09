@@ -1,17 +1,23 @@
 import React from 'react'
 
-const getVariableInput = (vars, setVars, varName, type='string') => {
-  return <input value={vars[varName]} onChange={e => setVars(varName, e.target.value)} type={type} />
+const getVariableNameInput = (vars, setVars, varName) => {
+  return <input value={vars[varName]} onChange={e => {
+    if (!e.target.value.match('^[A-Za-z_]*$')) {
+      return false;
+    } else {
+      setVars(varName, e.target.value)
+    }
+  }} />
 }
-
+const getNumberInput = (vars, setVars, varName) => <input value={vars[varName]} onChange={e => setVars(varName, e.target.value)} type="number"/>
 
 export default [
   {
     id: 1,
     text: 'Add one variable to another',
     render: (vars, setVars) => <>
-      Add {getVariableInput(vars, setVars, 'v2')}
-      to {getVariableInput(vars, setVars, 'v1')}
+      Add {getVariableNameInput(vars, setVars, 'v2')}
+      to {getVariableNameInput(vars, setVars, 'v1')}
     </>,
     python: vars => [`${vars['v1']} += ${vars['v2']}`],
     c: vars => [`${vars['v1']} = ${vars['v1']} + ${vars['v2']};`],
@@ -32,7 +38,7 @@ export default [
     id: 2,
     text: 'Add a constant to a variable',
     render: (vars, setVars) => <>
-      Add {getVariableInput(vars, setVars, 'v2', 'number')} to {getVariableInput(vars, setVars, 'v1')}
+      Add {getNumberInput(vars, setVars, 'v2')} to {getVariableNameInput(vars, setVars, 'v1')}
     </>,
     python: vars => [`${vars['v1']} += ${vars['v2']}`],
     c: vars => [`${vars['v1']} = ${vars['v1']} + ${vars['v2']};`],
