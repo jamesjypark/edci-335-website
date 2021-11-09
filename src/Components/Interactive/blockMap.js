@@ -56,6 +56,7 @@ export default [
     }
   },
   {
+    id: 3,
     text: 'Multiply one variable by another',
     render: (vars, setVars) => <>
       Multiply {getVariableNameInput(vars, setVars, 'a')}
@@ -77,6 +78,26 @@ export default [
       a: 'x',
       b: 'y'
     }
+  },
+  {
+    id: 4,
+    text: 'Print a variable to the console',
+    render: (vars, setVars) => <>
+      Print {getVariableNameInput(vars, setVars, 'x')}
+    </>,
+    python: ({ x }) => [`print(${x})`],
+    c: ({ x }) => [`std::cout << ${x} << std::endl`],
+    mips: ({ x }) => [
+      `LA $t0, ${x}`,
+      'LW $a0, ($t0)',
+      `LI $v0, 1`,
+      `syscall`
+    ],
+    initialVars: {
+      x: 'x'
+    }
   }
+
+      
 ]
 
