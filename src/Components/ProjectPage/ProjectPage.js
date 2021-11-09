@@ -1,4 +1,6 @@
 import React from "react";
+import Interactive from "../Interactive/Interactive"
+import { NavLink } from "react-router-dom";
 
 import "./ProjectPage.scss";
 
@@ -54,6 +56,13 @@ class ProjectPage extends React.Component {
           return <div className="paragraph-container">{item.text}</div>;
         case "image":
           return <img src={item.address} />;
+        case "image-caption":
+          return (
+          <div>
+            <img src={item.address} />
+            <div>{item.caption}</div>
+          </div>
+        );
         case "video":
           return (
             <iframe
@@ -65,6 +74,16 @@ class ProjectPage extends React.Component {
               title="video"
             />
           );
+        case "next-button":
+          return (
+            <div className="subheader2">
+              <NavLink exact to={item.link} className="link" activeClassName="active">
+                Next Lesson: {item.title}
+              </NavLink>
+            </div>
+          )
+        case "interactive":
+          return <Interactive />
       }
     });
   };

@@ -53,7 +53,7 @@ class Code extends React.Component {
           />
           <Route
             path="/edci-335-website/code/part1"
-            render={() => <ProjectPage {...Intro} />}
+            render={() => <ProjectPage {...Part1} />}
           />
         </Switch>
       </div>
