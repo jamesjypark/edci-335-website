@@ -9,6 +9,7 @@ const getVariableNameInput = (vars, setVars, varName) => {
     }
   }} />
 }
+
 const getNumberInput = (vars, setVars, varName) => <input value={vars[varName]} onChange={e => setVars(varName, e.target.value)} type="number"/>
 
 export default [
@@ -52,6 +53,29 @@ export default [
     initialVars: {
       v1: 'x',
       v2: 0
+    }
+  },
+  {
+    text: 'Multiply one variable by another',
+    render: (vars, setVars) => <>
+      Multiply {getVariableNameInput(vars, setVars, 'a')}
+      by {getVariableNameInput(vars, setVars, 'b')}
+    </>,
+    python: ({a, b}) => [`${a} *= ${b}`],
+    c: ({a, b}) => [`${a} = ${a} * ${b}`],
+    mips: ({a, b}) => [
+    `LA $t0, ${a}`,
+    'LW $t1, ($t0)',
+    `LA $t0, ${b}`,
+    'LW $t2, ($t0)',
+    'mult $t1, $t1',
+    'mflo $t1',
+    `LA $t0, ${a}`,
+    `SW $t1, $(t0)`
+    ],
+    initialVars: {
+      a: 'x',
+      b: 'y'
     }
   }
 ]
