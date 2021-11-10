@@ -104,6 +104,38 @@ else:
       text: "One of Python’s main uses today is to make a web server application. Since the information is being sent over the internet, using slower, easier languages makes sense since they can be quite slow but still be negligible compared to transmitting data over the internet. Django is one of the top server application libraries, with 60.5K starts (the equivalents of likes) on GitHub. Python is also quite often used in data science since it’s easy for non-programmers or amateur programmers to work with and speed is less important since each query is often only run a couple of times to generate graphs filled with the collected data. Thus, the developer saves more time on development than they lose when running the program."
     },
     {
+      type: "subheader2",
+      text: "Let's test your understanding!"
+    },
+    {
+      type: "quiz",
+      questions: [
+        {
+          description: "Why is Python used in web development?",
+          options: ["Because it is the newest language", "Because internet speed slows down communication, thus Python's slowness is acceptable", "Because Python is the fastest programming language", "Because internet users like code written in Python the best"],
+          answer: "Because internet speed slows down communication, thus Python's slowness is acceptable"
+        }
+      ]
+    },
+    {
+      type: "paragraph",
+      text: ""
+    },
+    {
+      type: "quiz",
+      questions: [
+        {
+          description: "Why does PIP make Python easier to use?",
+          options: ["Because you can use existing code modules", "Because it guides you on how to implement certain features", "Because it allows you to showcase Python expertise with other developers", "Because PIP translates Python to a faster programming language"],
+          answer: "Because you can use existing code modules"
+        }
+      ]
+    },
+    {
+      type: "paragraph",
+      text: ""
+    },
+    {
       type: "next-button",
       title: "Outro",
       link: "/edci-335-website/code/outro"

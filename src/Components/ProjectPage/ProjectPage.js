@@ -1,5 +1,6 @@
 import React from "react";
 import Interactive from "../Interactive/Interactive"
+import Quiz from "../Quiz/Quiz";
 import { NavLink } from "react-router-dom";
 import { CopyBlock, dracula } from "react-code-blocks";
 
@@ -86,21 +87,21 @@ class ProjectPage extends React.Component {
         case "code":
           return (
             <div className="code-block">
-            <CopyBlock
-              language="c"
-              text={item.code}
-              codeBlock
-              theme={dracula}
-              showLineNumbers={true}
-            />
+              <CopyBlock
+                language="c"
+                text={item.code}
+                codeBlock
+                theme={dracula}
+                showLineNumbers={true}
+              />
             </div>
           )
         case "interactive":
           return <Interactive 
             languages = {item.languages}
           />
-        case "break":
-          return <div></div>
+        case "quiz":
+          return <Quiz questions={item.questions} />
       }
     });
   };

@@ -9,12 +9,14 @@ import Part1 from "../Projects/Part1";
 import Part2 from "../Projects/Part2";
 import Part3 from "../Projects/Part3";
 import Outro from "../Projects/Outro";
+import Rationale from "../Projects/Rationale";
 
 import IntroLogo from "../../assets/intro.svg";
 import Part1Logo from "../../assets/part1.svg";
 import Part2Logo from "../../assets/part2.svg";
 import Part3Logo from "../../assets/part3.svg";
 import OutroLogo from "../../assets/outro.svg";
+import RationaleLogo from "../../assets/rationale.svg";
 
 import "./Code.scss";
 
@@ -36,6 +38,9 @@ function CodeList() {
       </NavLink>
       <NavLink className="link" to="/edci-335-website/code/outro">
         <ProjectCard image={OutroLogo} {...Outro} />
+      </NavLink>
+      <NavLink className="link" to="/edci-335-website/code/rationale">
+        <ProjectCard image={RationaleLogo} {...Rationale} />
       </NavLink>
     </div>
   );
@@ -66,6 +71,10 @@ class Code extends React.Component {
           <Route
             path="/edci-335-website/code/outro"
             render={() => <ProjectPage {...Outro} />}
+          />
+          <Route
+            path="/edci-335-website/code/rationale"
+            render={() => <ProjectPage {...Rationale} />}
           />
         </Switch>
       </div>

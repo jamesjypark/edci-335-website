@@ -101,6 +101,38 @@ export default {
       text: "Today, basically never. Any practical application will be programmed in at least C, as the C compiler has gotten so good that the speed advantage assembly provides is negligible in today’s hardware. Some notable uses of assembly are NES and SNES games, the code used in the Apollo missions (including the lunar landing), and earlier versions of MS-DOS."
     },
     {
+      type: "subheader2",
+      text: "Let's test your understanding!"
+    },
+    {
+      type: "quiz",
+      questions: [
+        {
+          description: "What’s the main advantage of using assembly over other programming languages?",
+          options: ["Cleaness", "Convenience When Developing", "Fastness", "Compatibility"],
+          answer: "Fastness"
+        }
+      ]
+    },
+    {
+      type: "paragraph",
+      text: ""
+    },
+    {
+      type: "quiz",
+      questions: [
+        {
+          description: "Assembly is one to one with the actual machine code your computer runs on",
+          options: ["True", "False"],
+          answer: "True"
+        }
+      ]
+    },
+    {
+      type: "paragraph",
+      text: ""
+    },
+    {
       type: "next-button",
       title: "Part 2 - C",
       link: "/edci-335-website/code/part2"

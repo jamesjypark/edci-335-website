@@ -1,5 +1,3 @@
-import React from "react";
-
 export default {
   title: "Intro",
   duration: "5 Minutes",

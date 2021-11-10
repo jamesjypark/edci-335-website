@@ -131,9 +131,41 @@ export default {
       text: "C (And the closely-related C++) are both commonly used anywhere where speed is an important factor. Game Development is still commonly one through C since a faster-running program means that more complicated models and higher-resolution textures can be drawn on the screen without performance issues. C is also commonly used when programming an operating system (such as Windows or macOS) since the operating system needs to manage all the other programs on the computer, and thus can easily become the bottleneck."
     },
     {
+      type: "subheader2",
+      text: "Let's test your understanding!"
+    },
+    {
+      type: "quiz",
+      questions: [
+        {
+          description: "What does it mean when a language is “static” typed, and how does it impact speed?",
+          options: ["Static means code does not move, slower", "Static means variable has a type, faster", "Static means code can be only interpreted one way, faster", "Static means the code was written using C, slower"],
+          answer: "Static means variable has a type, faster"
+        }
+      ]
+    },
+    {
+      type: "paragraph",
+      text: ""
+    },
+    {
+      type: "quiz",
+      questions: [
+        {
+          description: "Why is C used for operating systems?",
+          options: ["C is the most reliable programming language", "C is the oldest programming language, which means we know a lot about it.", "Many people are experienced in C", "C is much faster than other languages"],
+          answer: "C is much faster than other languages"
+        }
+      ]
+    },
+    {
       type: "next-button",
       title: "Part 3 - Python",
       link: "/edci-335-website/code/part3"
-    }
+    },
+    {
+      type: "paragraph",
+      text: ""
+    },
   ]
 };
