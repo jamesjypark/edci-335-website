@@ -96,6 +96,14 @@ class ProjectPage extends React.Component {
               />
             </div>
           )
+        case "button":
+          return (
+            <div className="button">
+              <a className="link" href={item.link}>
+                {item.button_text}
+              </a>
+            </div>
+          )
         case "interactive":
           return <Interactive 
             languages = {item.languages}

@@ -56,6 +56,11 @@ export default {
       text: "We hope you've found this learning resource helpful and we wish you the best in your programming endeavours in the future!"
     },
     {
+      type: "button",
+      button_text: "Final Assessment",
+      link: "https://docs.google.com/forms/d/1juK3Pr_H9Tor5OjrU3amXQOrMXEzf0npJ8XU7JJ2YBU/edit"
+    },
+    {
       type: "next-button",
       title: "Rationale",
       link: "/edci-335-website/code/rationale"
