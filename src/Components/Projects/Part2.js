@@ -76,7 +76,8 @@ export default {
     {
       type: "paragraph",
       text: `"name" is what we want to replace %s`
-    },{
+    },
+    {
       type: "paragraph",
       text: `"x" is what we want to replace %d`
     },
@@ -87,6 +88,10 @@ export default {
     {
       type: "paragraph",
       text: ""
+    },
+    {
+      type: "paragraph",
+      text: "C has many more features that make it much easier to use than MIPS. A comprehensive list of them is available online [4]."
     },
     {
       type: "subheader2",
@@ -112,7 +117,7 @@ export default {
     },
     {
       type: "paragraph",
-      text: "Even though it’s slower than assembly, C is still much, much faster than most other programming languages. Since C is compiled, the compiler can perform many different performance-improving tricks to make the program run significantly faster. C also generally tends to use less memory than other programming languages, since each variable has a different type (and therefore a known size) and each variable is discarded as soon as it is not needed."
+      text: "Even though it’s slower than assembly, C is still much, much faster than most other programming languages. Since C is compiled, the compiler can perform many different performance-improving tricks to make the program run significantly faster [2]. C also generally tends to use less memory than other programming languages, since each variable has a different type (and therefore a known size) and each variable is discarded as soon as it is not needed."
     },
     {
       type: "subheader2",
@@ -120,7 +125,7 @@ export default {
     },
     {
       type: "paragraph",
-      text: "Compared to most languages, it is still quite difficult to work with. Since each variable has a different type, the programming has to manually keep track of what variable is storing what data type at any given time. For example, const char* x = “Hello” + “ World” is not a valid C code even though it seems obvious to us that x should store the value “Hello World”. However, the compiler doesn’t know what + means unless it is simply adding two numbers together, so the programmer will have to manually implement concatenating two strings together."
+      text: "Compared to most languages, it is still quite difficult to work with [2]. Since each variable has a different type, the programming has to manually keep track of what variable is storing what data type at any given time. For example, const char* x = “Hello” + “ World” is not a valid C code even though it seems obvious to us that x should store the value “Hello World”. However, the compiler doesn’t know what + means unless it is simply adding two numbers together, so the programmer will have to manually implement concatenating two strings together."
     },
     {
       type: "subheader2",

@@ -45,7 +45,7 @@ export default {
     },
     {
       type: "subheader2",
-      text: "Finishing thoughts"
+      text: "Final thoughts"
     },
     {
       type: "paragraph",
@@ -54,6 +54,19 @@ export default {
     {
       type: "paragraph",
       text: "We hope you've found this learning resource helpful and we wish you the best in your programming endeavours in the future!"
+    },
+    {
+      type: "subheader2",
+      text: "Resources"
+    },
+    {
+      type: "list",
+      list: [
+        "1. “MIPS Reference Sheet.” MIPS Reference Sheet, University of Arizona, https://uweb.engr.arizona.edu/~ece369/Resources/spim/MIPSReference.pdf.",
+        "2. Clews, Alec. “How Programming Languages Have Changed over the Years.” PaperCut Blog, 7 Feb. 2018, https://www.papercut.com/blog/how-programming-languages-have-changed-over-the-years/.",
+        "3. “Python 3.10.0 Documentation.” 3.10.0 Documentation, https://docs.python.org/3/.",
+        "4. “C Language.” Cppreference.com, https://en.cppreference.com/w/c/language."
+      ]
     },
     {
       type: "button",

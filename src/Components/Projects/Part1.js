@@ -59,6 +59,10 @@ export default {
         `This is a very simple MIPS program. Doing anything even slightly complicated (like multiplication or division) can use a lot of lines to write.`
     },
     {
+      type: "paragraph",
+      text: "See the MIPS documentation[1] for more instructions."
+    },
+    {
       type: "subheader2",
       text:
         `Try it yourself!`

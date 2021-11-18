@@ -53,6 +53,10 @@ else:
       text: ""
     },
     {
+      type: "paragraph",
+      text: "See the python documentation for more examples [3]"
+    },
+    {
       type: "subheader2",
       text:
         `Try it yourself!`
