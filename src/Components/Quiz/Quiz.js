@@ -8,8 +8,10 @@ function Question(question) {
 
   const [isCorrect, setIsCorrect] = useState(false);
   const [resultValue, setResultValue] = useState(false);
+  const [selectedValue, setSelectedValue] = useState(null);
 
   const handleButtonClick = (e) => {
+    setSelectedValue(e.target.value);
     if (e.target.value === answer) {
       setResultValue(`Correct! You've got the answer 🎉`);
       setIsCorrect(true);
@@ -27,7 +29,7 @@ function Question(question) {
           return (
             <div className="left">
               <button
-                className = "button"
+                className = {`button ${selectedValue == option ? isCorrect ? 'correct' : 'wrong' : ''}`}
                 onClick = {handleButtonClick}
                 value = {option}
               >
@@ -45,7 +47,6 @@ function Question(question) {
 
 export default function Quiz(props) {
   const { questions } = props;
-  console.log(questions);
   return(
     <div>
       {questions.map(question => 

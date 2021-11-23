@@ -87,7 +87,7 @@ export default {
     },
     {
       type: "paragraph",
-      text: "Our resource is available to many different types of learners. Learners with a loss of hearing will have the exact same experience as learners with hearing, as there is no audio component to the website. Furthermore, we have made our website responsive, which allows it to be used on any shape of device within reason. Thus, someone without access to a computer can access the website on their smartphone or tablet."
+      text: "Our resource is available to many different types of learners. Learners with a loss of hearing will have the exact same experience as learners with hearing, as there is no audio component to the website. Additionally, our website uses high contrast colours to ensure colour blind learners can read the contents without difficulty. Furthermore, we have made our website responsive, which allows it to be used on any shape of device within reason. Thus, someone without access to a computer can access the website on their smartphone or tablet."
     },
     {
       type: "subheader2",
